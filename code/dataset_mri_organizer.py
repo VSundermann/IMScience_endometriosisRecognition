@@ -5,7 +5,7 @@ import shutil
 dataset_dir = '../dataset_processed'
 MRI_images_dir = os.path.join(dataset_dir, 'MRI_images')
 
-dataset_info = pd.read_csv('../dataset_processed/dataset_info.csv')
+dataset_info = pd.read_csv('../dataset_processed/dataset_info_D1.csv')
 
 OV_MRI_images_dir = os.path.join(MRI_images_dir, 'ov')
 UT_MRI_images_dir = os.path.join(MRI_images_dir, 'ut')
@@ -90,9 +90,11 @@ for index, row in dataset_info.iterrows():
         if row['Other File'] == 1:
             shutil.copy(PAT_MRI_image_path, os.path.join(CDS_MRI_images_dir, f'{patient_id}_pat.nii.gz'))
 
+    """
     # Delete the original files
     os.remove(T1_MRI_image_path)
     os.remove(T1FS_MRI_image_path)
     os.remove(T2_MRI_image_path)
     os.remove(T2FS_MRI_image_path)
     os.remove(PAT_MRI_image_path)
+    """

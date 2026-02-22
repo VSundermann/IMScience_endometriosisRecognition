@@ -1,7 +1,13 @@
 dataset_processed
 dataset_raw
+
 code/runs
 code/venv
 code/__pycache__
+
 thesis/
+
 articles/
+
+# LaTeX files
+2025-imscience-model/
