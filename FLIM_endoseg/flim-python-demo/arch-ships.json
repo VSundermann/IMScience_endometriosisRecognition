@@ -1,0 +1,113 @@
+{
+    "layer1": {
+        "conv": {
+            "dilation_rate": [
+                1,
+                1,
+                0
+            ],
+            "kernel_size": [
+                3,
+                3,
+                0
+            ],
+            "nkernels_per_image": 100000,
+            "nkernels_per_marker": 5,
+            "noutput_channels": 32
+        },
+        "pooling": {
+            "size": [
+                7,
+                7,
+                0
+            ],
+            "stride": 1,
+            "type": "max_pool"
+        },
+        "relu": true
+    },
+    "layer2": {
+        "conv": {
+            "dilation_rate": [
+                1,
+                1,
+                0
+            ],
+            "kernel_size": [
+                3,
+                3,
+                0
+            ],
+            "nkernels_per_image": 100000,
+            "nkernels_per_marker": 5,
+            "noutput_channels": 64
+        },
+        "pooling": {
+            "size": [
+                3,
+                3,
+                0
+            ],
+            "stride": 1,
+            "type": "max_pool"
+        },
+        "relu": true
+    },
+    "layer3": {
+        "conv": {
+            "dilation_rate": [
+                3,
+                3,
+                0
+            ],
+            "kernel_size": [
+                3,
+                3,
+                0
+            ],
+            "nkernels_per_image": 100000,
+            "nkernels_per_marker": 5,
+            "noutput_channels": 64
+        },
+        "pooling": {
+            "size": [
+                5,
+                5,
+                0
+            ],
+            "stride": 1,
+            "type": "avg_pool"
+        },
+        "relu": true
+    },
+    "layer4": {
+        "conv": {
+            "dilation_rate": [
+                3,
+                3,
+                0
+            ],
+            "kernel_size": [
+                3,
+                3,
+                0
+            ],
+            "nkernels_per_image": 100000,
+            "nkernels_per_marker": 5,
+            "noutput_channels": 64
+        },
+        "pooling": {
+            "size": [
+                3,
+                3,
+                0
+            ],
+            "stride": 1,
+            "type": "avg_pool"
+        },
+        "relu": true
+    },
+    "nlayers": 4,
+    "stdev_factor": 0.01
+}
+
